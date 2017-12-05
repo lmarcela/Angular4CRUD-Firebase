@@ -6,6 +6,27 @@
 - Repositorio subido con la instrucción: git push -u origin master.
 - Proyecto compilado con la instrucción: ng serve -o
 - CREAR COMPONENTE SIN ARCHIVOS CSS Y SPEC: ng g c components/employees --spec false -is
+- CREAR MODELO: ng g class models/employee
+- Firebase:
+--The official library for Firebase and Angular: https://github.com/angular/angularfire2
+Install: npm install firebase angularfire2 --save
+-- Add Firebase config to environments variable: Open /src/environments/environment.ts and add your Firebase configuration:
+
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: '<your-key>',
+    authDomain: '<your-project-authdomain>',
+    databaseURL: '<your-database-URL>',
+    projectId: '<your-project-id>',
+    storageBucket: '<your-storage-bucket>',
+    messagingSenderId: '<your-messaging-sender-id>'
+  }
+};
+
+-- En app.module.ts añadir: 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
