@@ -1,4 +1,11 @@
 # Angular4CRUDFirebase
+- Proyecto creado con la instrucción: ng new Angular4CRUD-Firebase.
+- Repositorio obtenido con la instrucción: git remote add origin https://github.com/lmarcela/Angular4CRUD-Firebase.git.
+- Añadir todo lo modificado al repositorio: git add .
+- Añadir commit con mensaje:git commit -m ""
+- Repositorio subido con la instrucción: git push -u origin master.
+- Proyecto compilado con la instrucción: ng serve -o
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
