@@ -5,6 +5,7 @@
 - Añadir commit con mensaje:git commit -m ""
 - Repositorio subido con la instrucción: git push -u origin master.
 - Proyecto compilado con la instrucción: ng serve -o
+- CREAR COMPONENTE SIN ARCHIVOS CSS Y SPEC: ng g c components/employees --spec false -is
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
