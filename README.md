@@ -7,6 +7,7 @@
 - Proyecto compilado con la instrucción: ng serve -o
 - CREAR COMPONENTE SIN ARCHIVOS CSS Y SPEC: ng g c components/employees --spec false -is
 - CREAR MODELO: ng g class models/employee
+- CREAR SERVICIO SIN SPEC: ng g s services/information --spec false 
 - Firebase:
 --The official library for Firebase and Angular: https://github.com/angular/angularfire2
 Install: npm install firebase angularfire2 --save
