@@ -25,4 +25,8 @@ export class EmployeeListComponent implements OnInit {
     })
   }
 
+  onItemClick(emp : Employee){
+    this.employeeService.selectedEmployee = emp;
+  }
+
 }
