@@ -16,7 +16,7 @@ export class EmployeeComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    if (form.value.$key == '') {
+    if (form.value.$key == null) {
       this.employeeService.insertEmployee(form.value);
     }
     else {
@@ -30,11 +30,18 @@ export class EmployeeComponent implements OnInit {
       form.reset();
     }
     this.employeeService.selectedEmployee = {
-      $key: '',
+      $key: null,
       name: '',
       position: '',
       office: '',
       salary: 0,
+    }
+  }
+
+  onDelete(form : NgForm){
+    if(confirm("Are you sure to delete this redord ?")==true){
+      this.employeeService.deleteEmployee(form.value.$key);
+      this.resetForm(form);
     }
   }
 

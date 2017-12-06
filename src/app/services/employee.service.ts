@@ -31,4 +31,8 @@ export class EmployeeService {
       salary: employee.salary
     });
   }
+  
+  deleteEmployee(key : string){
+    this.employeeList.remove(key);
+  }
 }
