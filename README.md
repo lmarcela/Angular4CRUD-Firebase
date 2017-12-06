@@ -39,7 +39,7 @@ The official library for Firebase and Angular: https://github.com/angular/angula
 1. Install: npm install firebase angularfire2 --save
 2. Add Firebase config to environments variable. Open /src/environments/environment.ts and add your Firebase configuration:
 
-    export const environment = {
+    - export const environment = {
         production: false,
         firebase: {
           apiKey: '<your-key>',
@@ -55,21 +55,16 @@ The official library for Firebase and Angular: https://github.com/angular/angula
 3. En app.module.ts añadir: 
 
 
-    import { AngularFireModule } from 'angularfire2';
-    import { AngularFireDatabaseModule } from 'angularfire2/database';
+    - import { AngularFireModule } from 'angularfire2';
+    - import { AngularFireDatabaseModule } from 'angularfire2/database';
       
 
 
 ## DESPLEGAR PROYECTO EN GITPAGES
-0. Revisar que en src/index.html este comentada o no exista ```html
-<base href='/'>
-```. De lo contrario habra problemas al desplegar el proyecto en GitPages.
+0. Revisar que en src/index.html este comentada o no exista ' < base href="/"> '. De lo contrario habra problemas al desplegar el proyecto en GitPages.
 1. Generar carpeta dist (ng build --env=prod --prod). Si se produce algun error corregir hasta que el comando se ejecute sin errores.
 2. Cambiar el nombre de la carpeta dist a docs
 3. En la configuracion (Settings) del repositorio, ir a la seccion "GitHub Pages". En Source elegir "master branch /docs folder". Luego save. 
+    
     Recuerde esperar a que termine de cargar todo el proyecto para ver satisfactoriamente el proyecto.
 4. El proyecto esta desplegado (Ej: https://lmarcela.github.io/Angular4CRUD-Firebase/)
-
-
-También se puede usar
-
