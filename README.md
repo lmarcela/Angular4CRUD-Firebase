@@ -1,7 +1,9 @@
 # Angular4CRUDFirebase
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
-Project based on this tutorial: https://www.youtube.com/watch?v=wQ5z9SFBlek
+Angular 4 CRUD Application Using Firebase.
+- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+- Project based on this tutorial: https://www.youtube.com/watch?v=wQ5z9SFBlek
+- DEMO: https://lmarcela.github.io/Angular4CRUD-Firebase/
 
 ## Comandos de utilidad
 
