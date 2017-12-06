@@ -31,7 +31,7 @@ Project based on this tutorial: https://www.youtube.com/watch?v=wQ5z9SFBlek
     CREAR SERVICIO SIN SPEC: ng g s services/information --spec false 
     PONER EN PRODUCCION: ng build --env=prod --prod
     HTTP-SERVER (SOLO LA PRIMERA VEZ): https://www.npmjs.com/package/http-server (npm install http-server -g)
-    EN LA CARPETA DIST DEL PROYECTO: http-server -o 
+    EN LA CARPETA DIST/DOCS DEL PROYECTO: http-server -o 
 
 ## Firebase configuration
 The official library for Firebase and Angular: https://github.com/angular/angularfire2
@@ -56,6 +56,8 @@ The official library for Firebase and Angular: https://github.com/angular/angula
 
 
 ## DESPLEGAR PROYECTO EN GITPAGES
+0. Revisar que en src/index.html este comentada o no exista 
+  <base href="/">. De lo contrario habra problemas al desplegar el proyecto en GitPages.
 1. Generar carpeta dist (ng build --env=prod --prod). Si se produce algun error corregir hasta que el comando se ejecute sin errores.
 2. Cambiar el nombre de la carpeta dist a docs
 3. En la configuracion (Settings) del repositorio, ir a la seccion "GitHub Pages". En Source elegir "master branch /docs folder". Luego save. 
