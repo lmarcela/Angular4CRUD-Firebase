@@ -26,7 +26,9 @@ export class EmployeeListComponent implements OnInit {
   }
 
   onItemClick(emp : Employee){
-    this.employeeService.selectedEmployee = emp;
+
+    /*Usar this.employeeService.selectedEmployee = emp; si se desea permitir que al modificar los datos en el form se cambien a la vez en la lista*/
+    this.employeeService.selectedEmployee =Object.assign({},emp);
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms'
+import { NgForm } from '@angular/forms'
 import { EmployeeService } from '../../services/employee.service'
 
 @Component({
@@ -9,27 +9,32 @@ import { EmployeeService } from '../../services/employee.service'
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor( private employeeService : EmployeeService ) { }
+  constructor(private employeeService: EmployeeService) { }
 
   ngOnInit() {
     this.resetForm();
   }
 
-  onSubmit(form: NgForm){
-    this.employeeService.insertEmployee(form.value);
+  onSubmit(form: NgForm) {
+    if (form.value.$key == '') {
+      this.employeeService.insertEmployee(form.value);
+    }
+    else {
+      this.employeeService.updateEmployee(form.value);
+    }
     this.resetForm(form);
   }
 
-  resetForm(form? : NgForm){
-    if(form!=null){
+  resetForm(form?: NgForm) {
+    if (form != null) {
       form.reset();
-    }    
+    }
     this.employeeService.selectedEmployee = {
-      $key:'',
-      name:'',
-      position:'',
-      office:'',
-      salary:0,
+      $key: '',
+      name: '',
+      position: '',
+      office: '',
+      salary: 0,
     }
   }
 
