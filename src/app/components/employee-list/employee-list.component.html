@@ -1,5 +1,24 @@
+<h5>Modo de edicion 1</h5>
 <ul class="list-group hover">
   <li class="list-group-item" *ngFor="let employee of employeelist" (click)="onItemClick(employee)">
     {{employee.name}} - {{employee.position}}
   </li>
 </ul>
+<br>
+<h5>Modo de edicion 2</h5>
+<table class="list-group hover">
+  <tr class="" *ngFor="let employee of employeelist">
+    <td>{{employee.name}} - {{employee.position}}</td>
+    <td class="list-group-item-inline">
+      <button type="button" class="btn btn-secondary" (click)="onItemClick(employee)">
+        <i class="fa fa-pencil text-primary"></i>
+      </button>
+    </td>
+    <td class="list-group-item-inline">
+      <button type="button" class="btn btn-secondary" (click)="onDelete(employee)">
+        <i class="fa fa-trash text-danger"></i>
+      </button>
+    </td>
+  </tr>
+
+</table>

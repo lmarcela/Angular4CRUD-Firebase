@@ -8,7 +8,6 @@ import { EmployeeService } from '../../services/employee.service'
   styles: []
 })
 export class EmployeeComponent implements OnInit {
-
   constructor(public employeeService: EmployeeService) { }
 
   ngOnInit() {
@@ -16,13 +15,18 @@ export class EmployeeComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    if (form.value.$key == null) {
-      this.employeeService.insertEmployee(form.value);
+    if (form.value.salary > 0) {
+      if (form.value.$key == null) {
+        this.employeeService.insertEmployee(this.employeeService.selectedEmployee);
+      }
+      else {
+        this.employeeService.updateEmployee(this.employeeService.selectedEmployee);
+      }
+      this.resetForm(form);
     }
     else {
-      this.employeeService.updateEmployee(form.value);
+      alert("El salario debe ser mayor a 0");
     }
-    this.resetForm(form);
   }
 
   resetForm(form?: NgForm) {
@@ -38,8 +42,8 @@ export class EmployeeComponent implements OnInit {
     }
   }
 
-  onDelete(form : NgForm){
-    if(confirm("Are you sure to delete this redord ?")==true){
+  onDelete(form: NgForm) {
+    if (confirm("Are you sure to delete this record ?") == true) {
       this.employeeService.deleteEmployee(form.value.$key);
       this.resetForm(form);
     }

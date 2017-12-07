@@ -31,4 +31,20 @@ export class EmployeeListComponent implements OnInit {
     this.employeeService.selectedEmployee =Object.assign({},emp);
   }
 
+  resetForm(emp?: Employee) {
+    this.employeeService.selectedEmployee = {
+      $key: null,
+      name: '',
+      position: '',
+      office: '',
+      salary: 0,
+    }
+  }
+
+  onDelete(emp : Employee){
+    if(confirm("Are you sure to delete this record ?")==true){
+      this.employeeService.deleteEmployee(emp.$key);
+      this.resetForm(emp);
+    }
+  }
 }
