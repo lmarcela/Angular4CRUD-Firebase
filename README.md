@@ -2,8 +2,23 @@
 
 Angular 4 CRUD Application Using Firebase.
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
-- Project based on this tutorial: https://www.youtube.com/watch?v=wQ5z9SFBlek
-- DEMO: https://lmarcela.github.io/Angular4CRUD-Firebase/
+- Project based on this tutorial: [https://www.youtube.com/watch?v=wQ5z9SFBlek] (https://www.youtube.com/watch?v=wQ5z9SFBlek)
+- DEMO: [https://lmarcela.github.io/Angular4CRUD-Firebase/](https://lmarcela.github.io/Angular4CRUD-Firebase/)
+
+## Imagenes
+
+### Vista en dispositivos moviles
+![Mobile view](https://github.com/lmarcela/Angular4CRUD-Firebase/blob/master/src/assets/img/readme/1.png)
+
+
+### Vista normal
+![view](https://github.com/lmarcela/Angular4CRUD-Firebase/blob/master/src/assets/img/readme/2.png)
+
+### Vista para edición de datos
+![Editar](https://github.com/lmarcela/Angular4CRUD-Firebase/blob/master/src/assets/img/readme/3.png)
+
+### Vista para eliminar registro
+![Eliminar](https://github.com/lmarcela/Angular4CRUD-Firebase/blob/master/src/assets/img/readme/4.png)
 
 ## Comandos de utilidad
 
